@@ -57,7 +57,7 @@ ALLOWED_HOSTS = [
     "app.anipreneur.com"
 ]
 if DEBUG:
-    ALLOWED_HOSTS += ["127.0.0.1", "localhost"]
+    ALLOWED_HOSTS += ["127.0.0.1", "localhost", "anipreneur.com", "app.anipreneur.com"]
 
 
 # Application definition
