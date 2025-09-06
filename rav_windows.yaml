@@ -1,26 +1,27 @@
 description: |
   rav is a simple tool to help run commands. 
   install with pip install rav
+  Windows version with Windows-style paths
 
 scripts:
   install:
-    - venv/bin/python -m pip install -r requirements.txt
+    - venv\Scripts\python.exe -m pip install -r requirements.txt
   install_dev:
-    - venv/bin/python -m pip install -r requirements.txt
-    - venv/bin/python -m pip install -r requirements.dev.txt
+    - venv\Scripts\python.exe -m pip install -r requirements.txt
+    - venv\Scripts\python.exe -m pip install -r requirements.dev.txt
   makemigrations:
-    - venv/bin/python src/manage.py makemigrations
+    - venv\Scripts\python.exe src/manage.py makemigrations
   migrate:
-    - venv/bin/python src/manage.py migrate
+    - venv\Scripts\python.exe src/manage.py migrate
   dev:
-    - venv/bin/python src/manage.py runserver 8080
+    - venv\Scripts\python.exe src/manage.py runserver 8080
   test:
-    - cd src && ../venv/bin/python manage.py test
+    - cd src && ..\venv\Scripts\python.exe manage.py test
   vendors_pull:
     # grab vendor files to serve via whitenoise
-    - venv/bin/rav download staticfiles_dev
+    - venv\Scripts\rav.exe download staticfiles_dev
   collectstatic:
-    - cd src && ../venv/bin/python manage.py collectstatic --noinput
+    - cd src && ..\venv\Scripts\python.exe manage.py collectstatic --noinput
   docker_build:
     - docker build -t cfe-saas-foundations:latest .
   docker_stop:
