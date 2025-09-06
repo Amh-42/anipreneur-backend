@@ -11,8 +11,8 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-production-secret-key-her
 
 # Allowed hosts - update with your domain
 ALLOWED_HOSTS = [
-    'yourdomain.com',
-    'www.yourdomain.com',
+    'anipreneur.com',
+    'app.anipreneur.com',
     'localhost',
     '127.0.0.1',
 ]
